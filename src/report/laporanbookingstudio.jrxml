@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8e44af29-0df6-4e16-8272-d7cfc3cc3c59">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="logo" class="java.lang.String"/>
+	<parameter name="pbook" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     bookingstudio.`nmrbooking` AS bookingstudio_nmrbooking,
+     bookingstudio.`id_operator` AS bookingstudio_id_operator,
+     bookingstudio.`id_pelanggan` AS bookingstudio_id_pelanggan,
+     bookingstudio.`nama_pelanggan` AS bookingstudio_nama_pelanggan,
+     bookingstudio.`tglsewa` AS bookingstudio_tglsewa,
+     bookingstudio.`studio` AS bookingstudio_studio,
+     bookingstudio.`jammsk` AS bookingstudio_jammsk,
+     bookingstudio.`jamsls` AS bookingstudio_jamsls,
+     bookingstudio.`durasi` AS bookingstudio_durasi,
+     bookingstudio.`hargasewa` AS bookingstudio_hargasewa,
+     bookingstudio.`ttlbiaya` AS bookingstudio_ttlbiaya,
+     bookingstudio.`dp` AS bookingstudio_dp
+FROM
+     `bookingstudio` bookingstudio
+WHERE
+nmrbooking=$P{pbook}]]>
+	</queryString>
+	<field name="bookingstudio_nmrbooking" class="java.lang.String"/>
+	<field name="bookingstudio_id_operator" class="java.lang.String"/>
+	<field name="bookingstudio_id_pelanggan" class="java.lang.String"/>
+	<field name="bookingstudio_nama_pelanggan" class="java.lang.String"/>
+	<field name="bookingstudio_tglsewa" class="java.lang.String"/>
+	<field name="bookingstudio_studio" class="java.lang.String"/>
+	<field name="bookingstudio_jammsk" class="java.lang.String"/>
+	<field name="bookingstudio_jamsls" class="java.lang.String"/>
+	<field name="bookingstudio_durasi" class="java.lang.String"/>
+	<field name="bookingstudio_hargasewa" class="java.lang.String"/>
+	<field name="bookingstudio_ttlbiaya" class="java.lang.String"/>
+	<field name="bookingstudio_dp" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="127" splitType="Stretch">
+			<frame>
+				<reportElement uuid="c9abe76f-c63d-48f6-acd4-a69083acb341" mode="Opaque" x="78" y="2" width="477" height="109" backcolor="#A7E16E"/>
+				<staticText>
+					<reportElement uuid="927f47de-e5bd-4363-9369-2f940531526f" x="0" y="0" width="477" height="41" backcolor="#0099CC"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Bell MT" size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MGR PROUD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="653fcfae-9f7c-419d-a38d-dfc7c4d5f646" x="0" y="41" width="477" height="34" forecolor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[ Jl. Kolintang 3 No.18 Rt.12/ Rw.09 , Kec.Sukmajaya,Kota Depok,Jawa barat 16411 ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="653fcfae-9f7c-419d-a38d-dfc7c4d5f646" x="0" y="75" width="477" height="30" forecolor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[Telp : 085781467725]]></text>
+				</staticText>
+			</frame>
+			<image>
+				<reportElement uuid="4f421776-43bb-494f-9328-dfb9bcfb4884" x="0" y="23" width="78" height="84"/>
+				<imageExpression><![CDATA[$P{logo}+"logomgr.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="238" splitType="Stretch">
+			<textField>
+				<reportElement uuid="591e4dfd-c286-4d05-ba4b-04d49cfcfd3f" x="157" y="57" width="177" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_nmrbooking}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="57" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="57" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[No.Booking]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="87cad16b-b6fb-4969-832b-af4b12d4af12" x="157" y="77" width="177" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_id_pelanggan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="77" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="77" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Id Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="97" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="97" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Nama Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="117" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="117" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Tanggal Sewa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="137" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="137" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Studio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="157" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="157" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Jam Masuk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="177" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="177" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Jam Selesai]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="197" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="197" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Durasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="144" y="217" width="13" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="0" y="217" width="144" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Bayar DP]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2a3bd641-e458-4931-95f2-ba7f0ea21563" x="157" y="97" width="177" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_nama_pelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d98bad9a-c066-48de-8483-dfbb6eed12aa" x="156" y="117" width="178" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_tglsewa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c52d45af-829d-4e4e-bc08-31352630010c" x="157" y="137" width="177" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_studio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="5db3f772-b4a1-41a4-91a1-19860d3242d4" x="156" y="157" width="178" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_jammsk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f7ffdd50-6198-4265-93f1-33481773223d" x="157" y="177" width="177" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_jamsls}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9a8b3a89-3237-43a5-b559-01cdb5f03677" x="157" y="197" width="177" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_durasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f7280340-a027-4897-871f-94be6a7d6175" x="156" y="217" width="178" height="20"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_dp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="576c31f2-580d-46f4-89aa-89b5e109f871" x="525" y="37" width="30" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{bookingstudio_id_operator}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="2b27d666-7394-4aa7-a88e-577014462e18" x="512" y="37" width="13" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="61396fd5-566c-41eb-9a74-b1b86da4ceb4" x="445" y="37" width="67" height="20"/>
+				<box>
+					<pen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Id Operator]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ad19f18a-b98a-481b-ba5f-53449754ec40" x="0" y="0" width="555" height="30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Bell MT" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BUKTI BOOKING STUDIO]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="6807b7a6-0553-40ad-b87b-35cce10653e8" x="0" y="31" width="555" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="105" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="af1f59f0-9db9-4735-9810-434c0175bb70" x="11" y="22" width="146" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Operator]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="07026d03-7c8f-4204-8c0c-a0ea3051ece1" x="407" y="3" width="144" height="20" forecolor="#000000"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[((new SimpleDateFormat("EEEEE dd MMMM yyyy", new Locale("id","ID"))).format(new java.util.Date()))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="af1f59f0-9db9-4735-9810-434c0175bb70" x="380" y="22" width="146" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pemilik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="15e82d39-5443-4fcd-a27c-e73b0b13c8a9" x="360" y="3" width="47" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Depok,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="af1f59f0-9db9-4735-9810-434c0175bb70" x="380" y="83" width="146" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(Yota Pratama)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="af1f59f0-9db9-4735-9810-434c0175bb70" x="11" y="83" width="146" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(Tama Pratama)]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
